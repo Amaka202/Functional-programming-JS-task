@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function divibleBy235(num) {
+                if (typeof num !== "number") {
+                return `${num} is not a number.`;
+                }
+                let result = [];
+                for (i = 1; i <= num; i++) {
+                    if (i % 2 === 0 && i % 3 !== 0 && i % 5 !== 0) {
+                        result.push("yu");
+                    } else if (i % 2 !== 0 && i % 3 === 0 && i % 5 !== 0) {
+                        result.push("gi");
+                    } else if (i % 2 !== 0 && i % 3 !== 0 && i % 5 === 0) {
+                        result.push("oh");
+                    } else if (i % 2 === 0 && i % 3 === 0 && i % 5 !== 0) {
+                        result.push("yu-gi");
+                    } else if (i % 2 === 0 && i % 3 !== 0 && i % 5 === 0) {
+                        result.push("yu-oh");
+                    } else if (i % 2 !== 0 && i % 3 === 0 && i % 5 === 0) {
+                        result.push("gi-oh");
+                    } else if (i % 2 === 0 && i % 3 === 0 && i % 5 === 0) {
+                        result.push("yu-gi-oh");
+                    } else {
+                        result.push(i);
+                    }
+                }
+                console.log(result);
+                return result;
+            }
+            divibleBy235(100);
+            divibleBy235(10);
+    </script>
+</body>
+</html>  
